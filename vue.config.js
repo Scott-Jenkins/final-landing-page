@@ -8,5 +8,6 @@ module.exports = {
                 changeOrigin: true
             },
         },
-      }
+      },
+    outputDir: "/public/src",
   }

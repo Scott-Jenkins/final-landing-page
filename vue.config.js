@@ -9,13 +9,13 @@ module.exports = {
             },
         },
     },
-    // server: {
-    //     proxy: {
-    //         '^/api': {
-    //             target: 'https://scottjenkinslandingpage.azurewebsites.net/',
-    //             ws: true,
-    //             changeOrigin: true
-    //         },
-    //     },
-    // }
+    server: {
+        proxy: {
+            '^/api': {
+                target: 'https://scottjenkinslandingpage.azurewebsites.net/',
+                ws: true,
+                changeOrigin: true
+            },
+        },
+    }
   }

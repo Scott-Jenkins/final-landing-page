@@ -26,6 +26,7 @@
 </template>
 
 <script>
+    import $ from "jquery";
     import general from './general.vue'
     import colorScheme from './color-scheme.vue'
     import componentLayout from './componentsLayout.vue'

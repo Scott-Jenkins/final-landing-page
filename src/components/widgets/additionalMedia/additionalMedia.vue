@@ -32,6 +32,7 @@
 
 <script>
 
+import {getUser} from "/src/helper.js";
 
 export default {
   name: 'additionalMedia',
@@ -42,7 +43,7 @@ export default {
             {
                 title: 'Office',
                 url: 'https://www.office.com/?auth=1',
-                img: '/src/assets/office.svg'
+                img: '/src/assets/Office.svg'
             },
             {
                 title: 'Word',

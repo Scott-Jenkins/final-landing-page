@@ -41,7 +41,7 @@
 </template>
 
 <script>
-
+import $ from "jquery";
 import loader from '/src/components/utilities/loading.vue'
 
 export default {

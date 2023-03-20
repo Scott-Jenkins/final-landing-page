@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import $ from "jquery";
+import {getUser, setTheme, getCSS} from "/src/helper.js";
 
 import Sidebar from './components/core/sidebar.vue'
 import additionalMedia from './components/widgets/additionalMedia/additionalMedia.vue'
@@ -125,15 +127,37 @@ export default {
                     "order": 0
                 }
             },
-            background: null
+            background: null,
+            scripts: [
+                // 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js',
+                // '//cdn.jsdelivr.net/npm/sweetalert2@11',
+                // 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js',
+                // 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.16.0/codemirror.min.js',
+                // 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.16.0/mode/javascript/javascript.min.js',
+                'https://cookieconsent.popupsmart.com/src/js/popper.js'
+            ]
         }
     },
     mounted() {
-        
+        this.addScripts();
         setTheme();
         this.getWidgets();
     },
     methods: {
+        addScripts: function(){
+
+            $.each(this.scripts, function (indexInArray, valueOfElement) { 
+                $("<script/>", {
+                    src: valueOfElement
+                }).appendTo("body")
+            });
+
+            $("#customCSS").text(getCSS());
+
+            setTimeout(() => {
+                window.start.init({ Palette: "palette6", Mode: "floating left", Theme: "classic", Time: "5", })
+            }, 1000);
+        },
         getStyle: function (item) {
             return `width: calc(${item.width}% - 52px); order: ${item.order}`
         },
@@ -151,6 +175,11 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.16.0/codemirror.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
 
 :root {
     --primary: #ff5252;

@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/landing-page/',
+    publicPath: '/final-landing-page/',
     devServer: {
         proxy: {
             '^/api': {
@@ -8,5 +8,14 @@ module.exports = {
                 changeOrigin: true
             },
         },
-      }
+    },
+    // server: {
+    //     proxy: {
+    //         '^/api': {
+    //             target: 'https://scottjenkinslandingpage.azurewebsites.net/',
+    //             ws: true,
+    //             changeOrigin: true
+    //         },
+    //     },
+    // }
   }

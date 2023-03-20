@@ -21,7 +21,7 @@
 </template>
 
 <script>
-
+import $ from "jquery";
     import item from '/src/components/widgets/news/item.vue'
 import loader from '/src/components/utilities/loading.vue'
 

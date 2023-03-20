@@ -33,7 +33,7 @@
 </template>
 
 <script>
-
+import $ from "jquery";
 import forecast from './forecast.vue';
 import loader from '@/components/utilities/loading.vue'
 

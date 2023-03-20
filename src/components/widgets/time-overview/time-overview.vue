@@ -6,12 +6,13 @@
 </template>
 
 <script>
+import {getUser, setUser} from "/src/helper.js";
 
 export default {
   name: 'time-overview',
   data: function () {
     return {
-      user: getUser(),
+      user: getUser,
       minutes: null,
       hour: null,
       timeOfDay: null,
@@ -36,8 +37,8 @@ export default {
         if (this.hour > 12)
             this.hour = this.hour - 12;
     },
-    updateName: function(){
-        var user = getUser();
+    updateName: function (){
+        var user = getUser;
 
         user.name = this.user.name;
 

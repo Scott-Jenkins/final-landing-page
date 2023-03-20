@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import {getTheme, setTheme} from "/src/helper.js";
 export default {
   name: 'color-scheme',
   data: function () {

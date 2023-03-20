@@ -8,12 +8,13 @@
 
 <script>
 
-
+import {getCSS, setCSS} from "/src/helper.js";
+import CodeMirror from 'codemirror'
 export default {
     name: 'theme',
     data: function () {
         return {
-            code: getCSS(),
+            code: getCSS,
             cssModal: null,
         }
     },

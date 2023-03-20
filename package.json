@@ -7,6 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "codemirror": "^6.0.1",
+    "jquery": "^3.6.4",
+    "moment": "^2.29.4",
     "vue": "^3.2.13"
   },
   "devDependencies": {

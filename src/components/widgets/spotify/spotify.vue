@@ -12,7 +12,7 @@
 </template>
 
 <script>
-
+import $ from "jquery";
     import app from './app.vue';
 
     export default {
